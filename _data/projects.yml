@@ -1,0 +1,72 @@
+projects:
+  - title: "MyBank Web App"
+    description: "MyBank is an innovative online banking platform designed to merge the reliability of traditional banking with cutting-edge technology."
+    url: "https://www.youtube.com/watch?v=UB7aueZu2GM&t"
+    repo: "https://github.com/username/mybank-web-app"
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Example.jpg/1920px-Example.jpg"
+    date: "August 2024"
+    tags: ["Python", "Django", "JavaScript", "REST API", "HTML", "Bootstrap CSS", "Web Development"]
+
+  - title: "uniVVV Social Media Network"
+    description: "uniVVV is a social media network focused on connecting students and professionals across various universities worldwide."
+    url: "https://www.youtube.com/watch?v=NtdT9O3pYmI&t"
+    repo: "https://github.com/username/univvv-social-network"
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Example_Image.jpg/1920px-Example_Image.jpg"
+    date: "July 2024"
+    tags: ["Python", "Django", "JavaScript", "HTML", "Bootstrap CSS", "Web Development"]
+
+  - title: "Mail Services"
+    description: "A secure and reliable email service platform designed for businesses to manage their communications effectively."
+    url: "https://www.youtube.com/watch?v=9cJn7UXuA90&t"
+    repo: "https://github.com/username/mail-services"
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Example_pict.jpg/1920px-Example_pict.jpg"
+    date: "June 2024"
+    tags: ["JavaScript", "Python", "Django", "Email", "Security"]
+
+  - title: "Space Marketplace"
+    description: "An online marketplace where users can buy and sell space-themed merchandise and services."
+    url: "https://www.youtube.com/watch?v=NXEd83gYiX4&t"
+    repo: "https://github.com/username/space-marketplace"
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Example_Mars.jpg/1920px-Example_Mars.jpg"
+    date: "May 2024"
+    tags: ["eCommerce", "JavaScript", "Python", "Web Development"]
+
+  - title: "AI Image Classifier"
+    description: "An AI-powered image classifier that identifies objects and animals in images with high accuracy."
+    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    repo: "https://github.com/username/ai-image-classifier"
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Example_image.jpg/1920px-Example_image.jpg"
+    date: "April 2024"
+    tags: ["AI", "Machine Learning", "Python", "TensorFlow", "Deep Learning"]
+
+  - title: "Weather Dashboard"
+    description: "A web application providing real-time weather updates and forecasts using a variety of APIs."
+    url: "https://www.youtube.com/watch?v=yPYZpwSpKmA"
+    repo: "https://github.com/username/weather-dashboard"
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Example_cloud.jpg/1920px-Example_cloud.jpg"
+    date: "March 2024"
+    tags: ["JavaScript", "API", "React", "CSS", "Web Development"]
+
+  - title: "Fitness Tracker App"
+    description: "A mobile-friendly application that helps users track their fitness goals and daily exercise routines."
+    url: "https://www.youtube.com/watch?v=l60MnDJklnM"
+    repo: "https://github.com/username/fitness-tracker-app"
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Example_fitness.jpg/1920px-Example_fitness.jpg"
+    date: "February 2024"
+    tags: ["JavaScript", "React Native", "Mobile App", "Health", "Fitness"]
+
+  - title: "Personal Blog"
+    description: "A personal blog platform to share articles and thoughts, built with a clean and responsive design."
+    url: "https://www.example.com"
+    repo: "https://github.com/username/personal-blog"
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Example_blog.jpg/1920px-Example_blog.jpg"
+    date: "January 2024"
+    tags: ["HTML", "CSS", "JavaScript", "Web Development", "Blog"]
+
+  - title: "Portfolio Website"
+    description: "A portfolio website to showcase projects, skills, and experience in web development and design."
+    url: "https://www.example.com"
+    repo: "https://github.com/username/portfolio-website"
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Example_portfolio.jpg/1920px-Example_portfolio.jpg"
+    date: "December 2023"
+    tags: ["HTML", "CSS", "JavaScript", "Web Development", "Portfolio"]

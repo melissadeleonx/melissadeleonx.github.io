@@ -1,0 +1,40 @@
+languages:
+  - item: YAML
+  - item: Markdown
+  - item: HTML
+  - item: CSS
+  - item: C
+  - item: Python
+  - item: php
+  - item: SQL
+  - item: JavaScript
+
+frameworks:
+  - item: Boostrap
+  - item: React
+  - item: Jekyll
+  - item: Node
+  - item: Tailwind CSS
+  - item: Sass
+  - item: Wordpress
+  - item: Next.js
+  - item: Flask
+  - item: Django
+
+tools:
+  - item: Bash
+  - item: Git & Github
+  - item: Gulp
+  - item: Chrome DevTools
+  - item: Vercel
+  - item: MongoDB
+  - item: Netlify
+
+
+# design:
+#   - item: Sketch
+#   - item: InDesign
+#   - item: InVision
+#   - item: Prototyping
+#   - item: Wireframing
+#   - item: User Testing

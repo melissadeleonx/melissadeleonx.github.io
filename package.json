@@ -1,0 +1,25 @@
+{
+  "name": "particle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp"
+  },
+  "author": "Melissa De Leon",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "framer-motion": "^11.0.3",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-plumber": "^1.2.1",
+    "gulp-uglify": "^3.0.1",
+    "sass": "^1.70.0"
+  },
+  "devDependencies": {
+    "gulp-sass": "^5.1.0"
+  }
+}

@@ -1,0 +1,15 @@
+- platform: "LinkedIn"
+  url: "https://www.linkedin.com/in/melissadeleonx"
+  icon: "linkedin"
+
+- platform: "GitHub"
+  url: "https://github.com/melissadeleonx"
+  icon: "github"
+
+- platform: "Twitter"
+  url: "https://twitter.com/melissadeleonx"
+  icon: "twitter"
+
+- platform: "Instagram"
+  url: "https://instagram.com/melissalaradeleon"
+  icon: "instagram"

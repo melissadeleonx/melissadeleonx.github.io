@@ -1,0 +1,51 @@
+# Site settings
+title: Melissa De Leon Portfolio Website - Version 5
+description: Discover innovative Python projects by Melissa De Leon. Explore my Jekyll-powered portfolio showcasing dynamic web apps like CS50 Community Notes and the Django-based MyBank. Learn about my passion for Computer Science and Cybersecurity. Visit my GitHub to view code and connect.
+baseurl: "" 
+url: "http://localhost:4000" #Update to actual site url for production
+
+
+
+# User settings
+username: Melissa De Leon
+user_description: Web developer with expertise in Javascript and Python Django framework
+user_title: Web Developer
+email: primavita19@gmail.com
+twitter_username: melissadeleonx  
+github_username:  melissadeleonx
+linkedin_username:  melissadeleonx
+
+# Google Analytics
+google-analytics:
+  id: "G-76N2RZQFV6"
+
+# Exclude files from Jekyll build
+exclude:
+  - package.json
+  - src
+  - node_modules
+  - .git
+  # - README.md
+
+# Permalink settings
+permalinks:
+  pretty: true
+
+# Markdown settings
+markdown: kramdown
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Theme
+# theme: jekyll-theme-minimal
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
