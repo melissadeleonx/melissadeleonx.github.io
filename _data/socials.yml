@@ -1,0 +1,14 @@
+# _data/socials.yml
+socials:
+  - name: Twitter
+    url: https://twitter.com/melissadeleonx
+    icon: bi-twitter  # Bootstrap Icons class for Twitter
+  - name: GitHub
+    url: https://github.com/melissadeleonx
+    icon: bi-github  # Bootstrap Icons class for GitHub
+  - name: LinkedIn
+    url: https://linkedin.com/in/melissadeleonx
+    icon: bi-linkedin  # Bootstrap Icons class for LinkedIn
+  - name: LinkedIn
+    url: https://instagram.com/melissalaradeleon
+    icon: bi-instagram  # Bootstrap Icons class for LinkedIn

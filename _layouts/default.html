@@ -2,14 +2,30 @@
 <html lang="en">
   {% include head.html %}
   <body>
+      <section id="header" class="bg-white">
       {% include header.html %}
+      </section>
+      <section id="versions">
+        {% include versions.html %}
+    </section>
+      
       <section id="about">
-        {% include about.html %}
+          {% include about.html %}
       </section>
-      </section>
+      
+
+      
       <section id="projects">
-        {% include projects.html %}
+          {% include projects.html %}
       </section>
-        {{ content }}
-      {% include footer.html %}
+
+    <main>
+      {{ content }}
+    </main>
+      
+    {% include footer.html %}
+      
+    {% include scripts.html %}
+
   </body>
+  </html>

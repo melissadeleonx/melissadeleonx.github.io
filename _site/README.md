@@ -156,6 +156,9 @@ Output directory for the built site (auto-generated).
 ## Troubleshooting
 Bundle Install Errors: Ensure Ruby and Bundler are properly installed.
 Plugin Issues: Check the Gemfile for correct plugin versions and run bundle install again.
+
+### Gulp
+
 ## Contributing
 Feel free to open issues or submit pull requests if you find bugs or have suggestions for improvements.
 

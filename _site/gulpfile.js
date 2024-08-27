@@ -36,7 +36,7 @@ gulp.task('browser-sync', gulp.series(['jekyll-build'], function(done) {
 			baseDir: '_site'
 		}
 	});
-	done()
+	done();
 }));
 
 /*
@@ -45,9 +45,10 @@ gulp.task('browser-sync', gulp.series(['jekyll-build'], function(done) {
 gulp.task('sass', function() {
   return gulp.src('src/styles/**/*.scss')
     .pipe(plumber())
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(csso())
-		.pipe(gulp.dest('assets/css/'))
+    .pipe(gulp.dest('assets/css/'))
+    .pipe(browserSync.stream()); // Stream CSS changes to BrowserSync
 });
 
 /*
@@ -78,14 +79,17 @@ gulp.task('js', function() {
 		.pipe(concat('main.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('assets/js/'))
+		.on('end', function() {
+            console.log('JavaScript files processed.');
+        });
 });
 
 gulp.task('watch', function() {
   gulp.watch('src/styles/**/*.scss', gulp.series(['sass', 'jekyll-rebuild']));
   gulp.watch('src/js/**/*.js', gulp.series(['js', 'jekyll-rebuild']));
-  gulp.watch('src/fonts/**/*.{tff,woff,woff2}', gulp.series(['fonts']));
+  gulp.watch('src/fonts/**/*.{ttf,woff,woff2}', gulp.series(['fonts']));
   gulp.watch('src/img/**/*.{jpg,png,gif}', gulp.series(['imagemin']));
-  gulp.watch(['*html', '_includes/*html', '_layouts/*.html'], gulp.series(['jekyll-rebuild']));
+  gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html'], gulp.series(['jekyll-rebuild']));
 });
 
 gulp.task('default', gulp.series(['js', 'sass', 'fonts', 'browser-sync', 'watch']));

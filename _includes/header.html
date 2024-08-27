@@ -1,20 +1,66 @@
-<div id="particles-js">
-  <div class="header">
-      <h1>
-        <span class="site-title">Melissa<br>De Leon</span>
-        <span class="site-description">{{site.user_title}}</span>
-      </h1>
-      <div class="header-icons">
-        <a aria-label="My Twitter" target="_blank" href="https://twitter.com/melissadeleonX"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
-        <a aria-label="My Portfolio" target="_blank" href="https://tech-journey-melissadeleonx.vercel.app/"><i class="icon fa fa-briefcase" aria-hidden="true"></i></a>
-        <a aria-label="My Github" target="_blank" href="https://github.com/melissadeleonx"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
+<!-- Navbar Toggle Button -->
+<nav class="navbar fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Melissa De Leon Portfolio</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="header-email">Get in touch 💌 <a class= "email-link" href="mailto:primavita19@gmail.com">primavita19@gmail.com</a></div>
-      <div class="header-links">
-        <a class="link" href="#about" data-scroll>About Me</a>
-        <a class="link" href="#projects" data-scroll>Projects</a>
-        <a class="link" href="https://tech-journey-melissadeleonx.vercel.app/resume.pdf" target="_blank">CV-2024</a>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Skills</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Projects
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Web App</a></li>
+              <li><a class="dropdown-item" href="#">Mobile App</a></li>
+              <li><a class="dropdown-item" href="#">Desktop App</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">My Collections of Websites</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-purple" type="submit">Search</button>
+        </form>
       </div>
+    </div>
   </div>
-  <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
+</nav>
+
+<div class="d-flex flex-column align-items-center justify-content-center vh-100 text-center border-bottom border-purple">  
+  <!-- Name and Title -->
+  <div class="text-content p-2">
+    <h1 class="display-1">{{ site.username }}</h1>
+    <h3 class="display-6">{{ site.user_title }}</h3>
+  </div>
+  
+  <!-- Action Buttons -->
+  <div class="d-flex gap-2 mb-2 p-4">
+    <a href="mailto:primavita19@gmail.com" class="btn btn-dark btn-lg me-2">Email Me</a>
+    <a href="#" class="btn btn-outline-dark btn-lg">View My CV</a>
+  </div>
+  
+  <!-- Social Links -->
+  <div class="socials">
+    {% for social in site.data.socials.socials %}
+    <a href="{{ social.url }}" target="_blank" title="{{ social.name }}" class="social-icon">
+      <i class="bi {{ social.icon }}"></i>
+    </a>
+    {% endfor %}
+  </div>
 </div>

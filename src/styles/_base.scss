@@ -1,21 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:wght@700&display=swap');
 
-body {
+
+/* Reset default margin and padding, set up basic text styles */
+html, body {
     margin: 0;
     padding: 0;
-    font-size: 100%;
+    font-size: 18px;
     line-height: 1.5;
-    color: #555;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Mona Sans', sans-serif;
+    background-color: $dark-bg;
+    color: $light-text;
 }
+
+
+/* Ensure box-sizing is consistent across all elements */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 article, aside, figcaption, figure, footer, header, nav, section {
     display: block;
 }
-h1, h2, h3, h4, stong {
-    margin-top: 1em;
+
+h1, h2, h3, h4, strong {
+    // margin-top: 1em;
     padding-top: 1em;
-    line-height: 1.25;
-    color: #333;
+    // line-height: 1.25;
+    color: $light-text;
 }
 h1 {
     font-size: 2.5rem;
@@ -41,4 +53,14 @@ a img {
 }
 sup, sub {
     line-height: 0;
+}
+
+.btn-purple {
+    background-color: $purple;
+    color: white;
+}
+
+.btn-purple:hover {
+    background-color: $purple-hover;
+    color: white;
 }

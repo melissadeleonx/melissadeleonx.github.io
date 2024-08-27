@@ -1,0 +1,13 @@
+/* morpher.js button css */
+.morph-button {
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+    }
+  
+  .morph-button:hover {
+    color: $purple;
+    }
+  
