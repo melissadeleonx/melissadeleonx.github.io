@@ -1,13 +1,141 @@
+/* Card Styling */
+
+.version-card {
+  width: 250px;
+  margin: 1rem;
+  border-radius: 8px;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: background-color 0.3s ease; 
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;  
+  cursor: pointer;
+
+}
+
+.version-card:hover {
+  transform: scale(1.05); 
+}
+
+
+// /* Google Color Backgrounds */
+// .version-card.version1 {
+//   background-color: #4285F4; /* Google Blue */
+//   border: 2px solid #4285F4;
+// }
+
+
+// .version-card.version1:hover {
+//   background-color: #006efd; 
+// }
+
+
+// .version-card.version2 {
+//   background-color: #DB4437; /* Google Red */
+//   border: 2px solid #DB4437;
+
+// }
+
+// .version-card.version2:hover {
+//   background-color: #fd0000; 
+// }
+
+// .version-card.version3 {
+//   background-color: #F4B400; /* Google Yellow */
+//   border: 2px solid #F4B400;
+
+// }
+
+// .version-card.version3:hover {
+//   background-color: #d89f00; 
+// }
+
+// .version-card.version4 {
+//   background-color: #0F9D58; /* Google Green */
+//   border: 2px solid #0F9D58;
+
+// }
+
+// .version-card.version4:hover {
+//   background-color: #008a48; 
+// }
+
+/* Adjust card text color to ensure readability */
+// .version-card h5 {
+//   color: rgb(255, 255, 255); 
+// }
+
+/* Image and Body Styling */
+.version-card img.card-img-top {
+  width: 100%; 
+  height: auto;
+}
+
+.card-body {
+  padding: 0.5rem;
+}
+
+/* Tooltip Styling */
+.tooltip-card {
+  max-width: 250px; 
+  text-align: center; 
+  pointer-events: none;
+
+}
+
+.tooltip-card img {
+  max-width: 100%; 
+  height: auto;
+}
+
+.tooltip-card p {
+  margin: 0.5rem 0 0; 
+}
+
+
+
 /* morpher.js button css */
 .morph-button {
-    font-size: 2rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    transition: color 0.3s;
-    }
-  
-  .morph-button:hover {
-    color: $purple;
-    }
-  
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  color: $orange;
+
+  }
+
+.morph-button:hover {
+color: $sec;
+}
+
+@media (max-width: 576px) {
+  .morph-button {
+      padding: 5px 10px;  
+      font-size: 1.5rem;  
+  }
+}
+
+
+.version-card.active {
+  opacity: 1;
+}
+
+/* Ensure the text is centered by default */
+.text-responsive {
+  text-align: center;
+}
+
+
+
+/* For medium screens and above (768px and up), align text to the start */
+@media (min-width: 768px) {
+  .text-responsive {
+    text-align: start;
+  }
+}
+

@@ -1,40 +1,33 @@
-languages:
+skills:
   - item: YAML
   - item: Markdown
   - item: HTML
   - item: CSS
+  - item: JavaScript
   - item: C
   - item: Python
-  - item: php
+  - item: Flask
+  - item: Django  
   - item: SQL
-  - item: JavaScript
-
-frameworks:
-  - item: Boostrap
-  - item: React
+  - item: API
+  - item: REST API
   - item: Jekyll
-  - item: Node
+  - item: Gulp
+  - item: Bootstrap
   - item: Tailwind CSS
   - item: Sass
-  - item: Wordpress
+  - item: React
   - item: Next.js
-  - item: Flask
-  - item: Django
-
-tools:
+  - item: Node
   - item: Bash
   - item: Git & Github
-  - item: Gulp
   - item: Chrome DevTools
+  - item: Google Cloud Console
   - item: Vercel
   - item: MongoDB
-  - item: Netlify
+  - item: Heroku
+  - item: Wordpress
+  - item: Cybersecurity Basics
+  - item: Cybersecurity Basics
+  - item: Google's Bug Hunting
 
-
-# design:
-#   - item: Sketch
-#   - item: InDesign
-#   - item: InVision
-#   - item: Prototyping
-#   - item: Wireframing
-#   - item: User Testing

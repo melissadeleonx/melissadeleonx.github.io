@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark"> 
   <!-- TODO: Add the SEO data -->
 <head>
   <meta charset="utf-8">
@@ -42,8 +42,9 @@
   <meta name="theme-color" content="#ffffff">
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer">
+
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="/assets/css/main.css">
@@ -54,7 +55,13 @@
 </head>
 
   <body>
-      <section id="header" class="bg-white">
+    <!-- Theme Toggler Button -->
+<button id="theme-toggler" class="btn btn-outline-secondary hover-accent">
+    <i id="theme-icon" class="bi bi-sun"></i>
+</button>
+
+    <section id="header">
+      <div class="connecting-line rounded-circle glow"></div>
       <!-- Navbar Toggle Button -->
 <nav class="navbar fixed-top">
   <div class="container-fluid">
@@ -64,282 +71,1003 @@
     </button>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Melissa De Leon Portfolio</h5>
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><a href="/">Melissa De Leon Portfolio</a></h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">About</a>
+            <a class="nav-link hover-accent" aria-current="page" href="#header">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Skills</a>
+            <a class="nav-link hover-accent" aria-current="page" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hover-accent" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hover-accent" href="#certificates">Certificates</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link hover-accent" href="#projects" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Projects
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Web App</a></li>
-              <li><a class="dropdown-item" href="#">Mobile App</a></li>
-              <li><a class="dropdown-item" href="#">Desktop App</a></li>
+              <li><a class="dropdown-item hover-accent" href="#projects">Web App</a></li>
+              <li><a class="dropdown-item hover-accent" href="#">Mobile App</a></li>
+              <li><a class="dropdown-item hover-accent" href="#">Desktop App</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">My Collections of Websites</a></li>
+              <li><a class="dropdown-item hover-accent" href="#">My Collections of Websites</a></li>
             </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hover-accent" href="#contact">Contact Me</a>
           </li>
         </ul>
         <form class="d-flex mt-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-purple" type="submit">Search</button>
+          <button class="btn btn-success" type="submit">Search</button>
         </form>
       </div>
     </div>
   </div>
 </nav>
 
-<div class="d-flex flex-column align-items-center justify-content-center vh-100 text-center border-bottom border-purple">  
+<div class="d-flex flex-column align-items-center justify-content-center vh-100 text-center">  
   <!-- Name and Title -->
   <div class="text-content p-2">
-    <h1 class="display-1">Melissa De Leon</h1>
-    <h3 class="display-6">Web Developer</h3>
+    <h1 class="display-1 display-md-1">Melissa De Leon</h1>
+    <h3 class="display-6 display-md-3 text-muted">Web Developer</h3>
   </div>
   
   <!-- Action Buttons -->
-  <div class="d-flex gap-2 mb-2 p-4">
-    <a href="mailto:primavita19@gmail.com" class="btn btn-dark btn-lg me-2">Email Me</a>
-    <a href="#" class="btn btn-outline-dark btn-lg">View My CV</a>
+  <div class="d-flex flex-column flex-md-row gap-2 mb-2 p-4">
+    <a href="mailto:primavita19@gmail.com" class="btn btn-success btn-lg me-2 mb-2 mb-md-0"><i class="bi bi-envelope"></i> Email Me
+    </a>
+    <a href="#" class="btn btn-outline-success btn-lg"><i class="bi bi-file-earmark-text"></i> View My CV
+    </a>
   </div>
   
   <!-- Social Links -->
-  <div class="socials">
+  <div class="socials mt-3">
     
-    <a href="https://twitter.com/melissadeleonx" target="_blank" title="Twitter" class="social-icon">
+    <a href="https://twitter.com/melissadeleonx" target="_blank" title="Twitter" class="social-icon mx-2">
       <i class="bi bi-twitter"></i>
     </a>
     
-    <a href="https://github.com/melissadeleonx" target="_blank" title="GitHub" class="social-icon">
+    <a href="https://github.com/melissadeleonx" target="_blank" title="GitHub" class="social-icon mx-2">
       <i class="bi bi-github"></i>
     </a>
     
-    <a href="https://linkedin.com/in/melissadeleonx" target="_blank" title="LinkedIn" class="social-icon">
+    <a href="https://linkedin.com/in/melissadeleonx" target="_blank" title="LinkedIn" class="social-icon mx-2">
       <i class="bi bi-linkedin"></i>
     </a>
     
-    <a href="https://instagram.com/melissalaradeleon" target="_blank" title="LinkedIn" class="social-icon">
+    <a href="https://instagram.com/melissalaradeleon" target="_blank" title="LinkedIn" class="social-icon mx-2">
       <i class="bi bi-instagram"></i>
     </a>
     
   </div>
 </div>
 
-      </section>
-      <section id="versions">
-        
-<!-- Index section for trusted partners -->
-<div class="col-12 col-lg-10 mx-auto text-center my-5">
-    <!-- Card for smaller screens -->
-    <div class="card d-md-none mx-3 my-3 bg-dark">
-        <div class="card-body">
-            <div class="d-flex flex-column align-items-center mb-4">
-                <h3 class="mb-0 me-md-3">Versions of My Portfolio <i class="bi bi-briefcase text-success me-2 fs-1"></i>
-                </h3>
-            </div>
-            <div class="d-flex flex-wrap justify-content-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Logo" class="mx-3 my-3" style="height: 40px;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg" alt="Walmart Logo" class="mx-3 my-3" style="height: 40px;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo" class="mx-3 my-3" style="height: 40px;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo" class="mx-3 my-3" style="height: 40px;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo" class="mx-3 my-3" style="height: 40px;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png" alt="Tesla Logo" class="mx-3 my-3" style="height: 40px;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Logo" class="mx-3 my-3" style="height: 40px;">
-            </div>
-        </div>
-    </div>
 
-    <!-- Non-card layout for larger screens -->
-    <div class="d-none d-md-flex flex-column flex-md-row mb-4">
-        <h3 class="mb-0 me-md-3">
-            Previous Versions of My Portfolio
-            <i class="bi bi-briefcase text-success me-2"></i>         
-        </h3>
-    </div>
-
-    <div class="d-none d-md-flex flex-wrap justify-content-center align-items-center">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Logo" class="mx-3 my-3" style="height: 40px;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg" alt="Walmart Logo" class="mx-3 my-3" style="height: 40px;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo" class="mx-3 my-3" style="height: 40px;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo" class="mx-3 my-3" style="height: 40px;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo" class="mx-3 my-3" style="height: 40px;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png" alt="Tesla Logo" class="mx-3 my-3" style="height: 40px;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Logo" class="mx-3 my-3" style="height: 40px;">
-    </div>
+<div class="capsule-container">
+  <!-- Burst effect container -->
+  <div class="burst-effect"></div>
+  <!-- Capsule Image -->
+  <img id="capsuleAnimation" src="/assets/img/capsule.png" alt="Capsule Corp Logo" class="capsule_image">
+  <div class="fire-buster left animate-fire-buster"></div>
+  <div class="fire-buster right animate-fire-buster"></div>
 </div>
 
-<div class="container d-flex align-items-center justify-content-center">
-    <button id="morph-button" class="morph-button m-4">Study. Code. Debug</button>
+
+    </section>
+    
+    <section id="versions">
+      <div class="connecting-line rounded-circle glow"></div>
+      <!-- Portfolio Versions Section -->
+<div class="col-12 col-lg-10 mx-auto my-5">
+    <div class="d-flex flex-column flex-md-row mb-4">
+      <h3 class="mb-0 text-responsive">
+        Previous Versions of my Portfolio
+      </h3>
+    </div>
+    </div>
+    
+    <!-- Portfolio Versions -->
+    <div class="d-flex flex-wrap justify-content-center">
+      <!-- Version 1 -->
+      <a href="https://melissadeleon.com/portfolio-version-1/" target="_blank" class="text-decoration-none">
+        <div class="card version-card mx-2 my-2" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="top" title="<div class='tooltip-card'><img src='/assets/img/v1portfolio.png' alt='Version 1 Preview' class='img-fluid'/><p>Built with HTML, BootstrapCSS, JavaScript</p></div>">
+          <img src="/assets/img/v1portfolio.png" class="card-img-top" alt="Version 1 Preview">
+          <div class="card-body text-center">
+            <h5 class="card-title">Version 1</h5>
+          </div>
+        </div>
+      </a>
+      
+      <!-- Version 2 -->
+      <a href="https://tech-journey-melissadeleonx.vercel.app/" target="_blank" class="text-decoration-none">
+        <div class="card version-card mx-2 my-2" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="top" title="<div class='tooltip-card'><img src='/assets/img/v2portfolio.png' alt='Version 2 Preview' class='img-fluid'/><p>Built with ReactJS, NextJS, TailwindCSS</p></div>">
+          <img src="/assets/img/v2portfolio.png" class="card-img-top" alt="Version 2 Preview">
+          <div class="card-body text-center">
+            <h5 class="card-title">Version 2</h5>
+          </div>
+        </div>
+      </a>
+  
+      <!-- Version 3 -->
+      <a href="https://melissadeleon.com/portfoliov3/" target="_blank" class="text-decoration-none">
+        <div class="card version-card mx-2 my-2" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="top" title="<div class='tooltip-card'><img src='/assets/img/v3portfolio.png' alt='Version 3 Preview' class='img-fluid'/><p>Built with Jekyll, Gulp, SCSS</p></div>">
+          <img src="/assets/img/v3portfolio.png" class="card-img-top" alt="Version 3 Preview">
+          <div class="card-body text-center">
+            <h5 class="card-title">Version 3</h5>
+          </div>
+        </div>
+      </a>
+      
+      <!-- Version 4 -->
+      <a href="https://melissadeleon.com/portfoliov4/" target="_blank" class="text-decoration-none">
+        <div class="card version-card mx-2 my-2" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="top" title="<div class='tooltip-card'><img src='/assets/img/v4portfolio.png' alt='Version 4 Preview' class='img-fluid'/>Built with ReactJS, TypeScript, NextJS, NodeJS, Tailwind CSS</p></div>">
+          <img src="/assets/img/v4portfolio.png" class="card-img-top" alt="Version 4 Preview">
+          <div class="card-body text-center">
+            <h5 class="card-title">Version 4</h5>
+          </div>
+        </div>
+      </a>
+      
+        <!-- Morpher button -->
+        <div class="container-fluid d-flex align-items-center justify-content-center">
+            <button id="morph-button" class="morph-button m-4">Study. Code. Debug. Repeat.</button>
+        </div>
+            
+    </div>
 </div>
 
     </section>
-      
-      <section id="about">
-          
-      </section>
-      
+    
+    <section id="about">
+      <div class="connecting-line rounded-circle glow"></div>
+      <!-- About Me Section -->
+<div class="col-12 col-lg-10 mx-auto text-center my-5">
+    <div class="d-md-flex flex-column flex-md-row mb-4">
+        <h3 class="mb-0 me-md-3">
+            About Me
+        </h3>
+    </div>
 
+    <div class="col-12 col-md">
+        <p class="display-4 mb-0 text-responsive">
+            <span class="text-yellow">Dedicated and innovative</span><br>
+            professional who thrives on resilience and passion.
+        </p>
+    </div>
+
+
+    <div class="d-md-flex flex-wrap justify-content-center align-items-center">
+        <!-- About Me Content Here -->
+        <div class="bio-section-container" id="bioSectionContainer">
+        <div class="container-fluid mt-5 p-0 vscode-window" id="bioSection">
+            <div class="vscode-tab-bar d-flex align-items-center" role="tablist"> 
+                <div class="vscode-tab active" role="tab">about.py</div>
+                <div class="vscode-tab" role="tab">README.md</div>
+                <div class="vscode-tab" role="tab">cs50.c</div>
+                <div class="vscode-tab" role="tab">dreams.cpp</div>
+            </div> 
+                        
+            <div class="d-flex">
+                <!-- Sidebar -->
+                <div class="vscode-sidebar p-3 d-flex flex-column align-items-center">
+                    <i class="bi bi-files" aria-label="Files"></i>
+                    <i class="bi bi-search" aria-label="Search"></i>
+                    <i class="bi bi-git" aria-label="Source Control"></i>
+                    <i class="bi bi-code-square" aria-label="Code Editor"></i>
+                    <i class="bi bi-grid" aria-label="Grid View"></i>
+                    <i class="bi bi-gear mb-2" aria-label="Settings"></i>                
+                </div>
+                        
+                <!-- Main Code Editor Area -->
+                <div class="vscode-editor">
+                    <div class="vscode-code"> 
+                        <pre class="python text-start">
+    <code><span class="comment"># Study. Code. Debug. Repeat.</span>
+    <span class="keyword">def</span> <span class="function">main</span>():
+        <span class="string">"""In my anime theme world, this means I want to fly. I will fly. I am flying.
+            More than 25 years ago, Son Goku of Dragon Balls Z taught me that through training, experience, 
+            persistence and dedication, I can achieve my goals. And I will do just that! I plan to pick up techniques 
+            from the Master Roshis of Programming and become great on my own. My dream is to craft an invention that 
+            screams 'future'. Imagine a creation so groundbreaking that it reshapes how we live. 
+            The future is calling, and innovation awaits!"""</span>
+        <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(4):
+            <span class="built_in">print</span>(<span class="string">"Study. Code. Debug. Repeat."</span>)
+    
+    <span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:
+        <span class="function">main</span>()
+    </code>
+                        </pre>
+                    </div> 
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<!-- <div class="d-none d-md-block col-12 col-lg-10 mx-auto text-center my-5"> 
+    <div class="about-section d-flex align-items-center mb-4" id="aboutSection">
+        <h3 class="mb-0 me-md-3">
+            <i class="bi bi-info-circle text-success me-2"></i>         
+            About Me
+        </h3>
+    </div>
+    
+    
+</div>  -->
+
+<!-- About for smaller screens -->
+<!-- <div class="card d-md-none mx-3 my-3 bg-dark"> 
+    <div class="card-body"> 
+        <div class="d-flex flex-column align-items-center mb-4"> 
+            <h3 class="mb-0 me-md-3"><i class="bi bi-person text-success me-2 fs-1"></i> About Me</h3>
+        </div> 
+
+        <div class="vscode-editor"> 
+            <div class="vscode-code">
+                <pre class="python text-start">
+<code><span class="comment"># Study. Code. Debug. Repeat.</span>
+<span class="keyword">def</span> <span class="function">main</span>():
+<span class="string">"""In my anime theme world, this means I want to fly. I will fly. I am flying.
+More than 25 years ago, Son Goku of Dragon Balls Z taught me that through training, experience, 
+persistence and dedication, I can achieve my goals. And I will do just that! I plan to pick up techniques 
+from the Master Roshis of Programming and become great on my own. My dream is to craft an invention that 
+screams 'future'. Imagine a creation so groundbreaking that it reshapes how we live. 
+The future is calling, and innovation awaits!"""</span>
+<span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(4):
+<span class="built_in">print</span>(<span class="string">"Study. Code. Debug. Repeat."</span>)
+
+<span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:
+<span class="function">main</span>()
+</code>
+                </pre>
+            </div> 
+        </div> 
+
+        <div class="d-flex flex-wrap justify-content-center">
+        </div>
+    </div> 
+</div>   -->
+
+    </section>
+    
+    <section id="skills">
+      <div class="connecting-line rounded-circle glow"></div>
+      <!-- Skills Section -->
+<div class="col-12 col-lg-10 mx-auto text-center my-5">
+    <!-- Section Header -->
+    <div class="d-none d-md-flex flex-column flex-md-row mb-4">
+        <h3 class="mb-0 me-md-3">
+            Skills
+        </h3>
+    </div>
+
+    <!-- Content Wrapper with Margins -->
+    <div class="container">
+        <!-- Row with margins for consistent spacing -->
+        <div class="row mx-3 d-flex flex-wrap justify-content-center align-items-center">
+            <!-- First Column for Desktop -->
+            <div class="col-12 col-md-6 mb-4" id="skillsSection">
+                <p class="lead">
+                    I believe that the more you learn, the more you want to learn. This mindset drives my continuous exploration of new technologies and skills. Below are the technologies I am familiar with so far. I am currently completing courses in Cybersecurity and AI, and I look forward to expanding this list as I conquer new fields.
+                </p>
+                <div class="d-flex flex-wrap justify-content-center" id="tagsContainer">
+                    <!-- Example Buttons -->
+                    
+                        <button class="btn btn-success btn-sm m-1">YAML</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">Markdown</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">HTML</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">CSS</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">JavaScript</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">C</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">Python</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">Flask</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">Django</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">SQL</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">API</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">REST API</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">Jekyll</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">Gulp</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">Bootstrap</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">Tailwind CSS</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">Sass</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">React</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">Next.js</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">Node</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">Bash</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">Git & Github</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">Chrome DevTools</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">Google Cloud Console</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">Vercel</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">MongoDB</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">Heroku</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">Wordpress</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">Cybersecurity Basics</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">Cybersecurity Basics</button>
+                    
+                        <button class="btn btn-success btn-sm m-1">Google's Bug Hunting</button>
+                    
+                </div>
+            </div>
+            
+            <!-- Second Column for Desktop -->
+            <div class="col-12 col-md-6 mb-4" id="skillsCard">
+                <div class="card rounded">
+                    <img src="/assets/img/cardport.png" loading="lazy" alt="Melissa De Leon Coding Skills" class="card-img-top rounded img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </section>
+    
+    <section id="certificates">
+
+      <div class="connecting-line rounded-circle glow"></div>
+      <div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+            <div class="mb-4 text-responsive">
+                <h2 class="display-4 mb-2">
+                    <span class="text-yellow">100% Thankful</span>
+                </h2>
+                <p class="fs-3 text-responsive">
+                    to the learning platforms that have shaped my journey in Computer Science.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Content Wrapper with Margins -->
+<div class="container">
+    <!-- Row with margins for consistent spacing -->
+    <div id="certificates-container" class="row mx-3 d-flex flex-wrap justify-content-center">
+        
+        <div class="col-md-6 col-sm-12 mb-4 certificate-card">
+            <div class="card h-100 shadow-sm rounded">
+                
+                <a href="https://certificates.cs50.io/be88f931-07d9-419d-a792-2ab1137c077e.pdf?size=letter" target="_blank">
+                    <img src="/assets/img/CS50W.png" class="certificate-card-image card-img-top img-fluid rounded" alt="CS50 Web Programming" loading="lazy">
+                </a>
+
+                
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <p class="text-muted mb-0 small">
+                            Harvard University | September 2024
+                        </p>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <h5 class="card-title mb-2">CS50 Web Programming</h5>
+                        <p class="card-text">Completed CS50 Web Programming with Python and JavaScript including six projects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-12 mb-4 certificate-card">
+            <div class="card h-100 shadow-sm rounded">
+                
+                <a href="https://certificates.cs50.io/5bb89bee-1225-4ac5-981a-5d75a17a0661.pdf?size=letter" target="_blank">
+                    <img src="/assets/img/CS50X.png" class="certificate-card-image card-img-top img-fluid rounded" alt="CS50X Introduction to Computer Science" loading="lazy">
+                </a>
+
+                
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <p class="text-muted mb-0 small">
+                            Harvard University | December 2023
+                        </p>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <h5 class="card-title mb-2">CS50X Introduction to Computer Science</h5>
+                        <p class="card-text">Completed CS50x Introduction to Computer Science, including ten problem sets, nine labs, and one final projects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-12 mb-4 certificate-card">
+            <div class="card h-100 shadow-sm rounded">
+                
+                <a href="https://courses.edx.org/certificates/cef15cace46045b4a84aa49f314170e9" target="_blank">
+                    <img src="/assets/img/HarvardEDX.png" class="certificate-card-image card-img-top img-fluid rounded" alt="EDX HarvardX CS50x Introduction to Computer Science" loading="lazy">
+                </a>
+
+                
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <p class="text-muted mb-0 small">
+                            EDX/HarvardX | December 2023
+                        </p>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <h5 class="card-title mb-2">EDX HarvardX CS50x Introduction to Computer Science</h5>
+                        <p class="card-text">Completed the course study offered by HarvardX, an online learning initiative of Harvard University</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-12 mb-4 certificate-card">
+            <div class="card h-100 shadow-sm rounded">
+                
+                <a href="https://www.linkedin.com/learning/certificates/580417c3e416ac5be3237cb2e07776a5fbd69e801a7550cce110bb6961a77002?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BbLxg1JM%2FR1q8SL318zGqPA%3D%3D" target="_blank">
+                    <img src="/assets/img/Linkedin-Certificate-CProgramming.png" class="certificate-card-image card-img-top img-fluid rounded" alt="C Programming Basics" loading="lazy">
+                </a>
+
+                
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <p class="text-muted mb-0 small">
+                            LinkedIn | November 2023
+                        </p>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <h5 class="card-title mb-2">C Programming Basics</h5>
+                        <p class="card-text">Acquired foundational knowledge of C programming basics, from Flow Control, Variables and Pointers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-12 mb-4 certificate-card">
+            <div class="card h-100 shadow-sm rounded">
+                
+                <a href="https://www.linkedin.com/learning/certificates/8d75ce725a898755b092dbefaf98a91a0fb3dbfa31d3c181f251756972e6edf5" target="_blank">
+                    <img src="/assets/img/Linkedin-Certificate-WebDev.png" class="certificate-card-image card-img-top img-fluid rounded" alt="Introduction to Web Design and Development" loading="lazy">
+                </a>
+
+                
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <p class="text-muted mb-0 small">
+                            LinkedIn | November 2023
+                        </p>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <h5 class="card-title mb-2">Introduction to Web Design and Development</h5>
+                        <p class="card-text">Acquired foundational knowledge of Web Development from HTML to CSS and JavaScript</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-12 mb-4 certificate-card">
+            <div class="card h-100 shadow-sm rounded">
+                
+                <a href="https://www.linkedin.com/learning/certificates/edca1028de539b8aade13e0f3b29a65a1c7551a680f2f6b0b98b74e103a0c095?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BbLxg1JM%2FR1q8SL318zGqPA%3D%3D" target="_blank">
+                    <img src="/assets/img/Linkedin-Certificate-Python-Programming.png" class="certificate-card-image card-img-top img-fluid rounded" alt="Introduction to Python Programming Language" loading="lazy">
+                </a>
+
+                
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <p class="text-muted mb-0 small">
+                            LinkedIn | November 2023
+                        </p>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <h5 class="card-title mb-2">Introduction to Python Programming Language</h5>
+                        <p class="card-text">Acquired foundational knowledge in Python Programming.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- Show More and Show Less Buttons -->
+    <div class="text-center mt-4">
+        <button id="arrow-more-btn" class="arrow-more-btn">
+            <i class="bi bi-chevron-double-down"></i>
+        </button>
+        <button id="arrow-less-btn" class="arrow-more-btn d-none">
+            <i class="bi bi-chevron-double-up"></i>
+        </button>
+    </div>
+</div>
+
+
+
+ 
+    </section>
+    
+    <section id="projects">
+      <div class="connecting-line rounded-circle glow"></div>
+    </div>
+      <!-- Projects Section -->
+<div class="col-12 col-lg-10 mx-auto text-center my-5">
+  <!-- Section Header -->
+  <div class="d-none d-md-flex flex-column flex-md-row mb-4">
+    <h3 class="mb-0 me-md-3">
+      Projects
+    </h3>
+  </div>
+
+  
+  <div class="col-12 col-md">
+    <p class="display-4 mb-0 text-responsive">
+      <span class="text-orange">My Pride and Joy</span><br>
+      Scalable web applications built with the tech stacks I've mastered along the way.
+    </p>
+</div>
+
+
+
+  <!-- Content Wrapper with Margins -->
+  <div class="container mt-5">
+    <!-- Row with margins for consistent spacing -->
+    <div id="projects-container" class="row mx-3 d-flex flex-wrap justify-content-center">
       
-      <section id="projects">
-          <h2 class="text-center my-4">Projects</h2>
-<div class="container py-5">
-  <div class="row justify-content-center">
-    
-      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4 project-card" style="display: none;"> <!-- Hidden by default -->
         <div class="card h-100 shadow-sm">
           
-            <img src="assets/img/sample.png" class="card-img-top" alt="MyBank Web App">
+          <img src="assets/img/mybankhero.png" class="project-img-top" alt="MyBank Web App" loading="lazy">
           
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">MyBank Web App</h5>
-            <p class="card-text">MyBank is an innovative online banking platform...</p>
-            
-              <a href="https://www.youtube.com/watch?v=UB7aueZu2GM&t" class="btn btn-primary mt-auto">View Project</a>
-            
-            
-              <a href="https://github.com/username/mybank-web-app" class="btn btn-secondary mt-2">View Repo</a>
-            
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <!-- Simple tag list with pipe separators and small text -->
+              <p class="text-muted mb-0 small">
+                
+                  Python | 
+                
+                  Django | 
+                
+                  JavaScript | 
+                
+                  API | 
+                
+                  BootstrapCSS
+                
+              </p>
+              <div class="d-flex align-items-center">
+                
+                <a href="https://github.com/melissadeleonx/" class="text-muted hover-accent me-2" target="_blank" aria-label="GitHub Repository">
+                  <i class="bi bi-github" style="font-size: 20px;"></i> 
+                </a>
+                
+                
+                <a href="https://www.youtube.com/watch?v=UB7aueZu2GM&t" class="text-muted hover-accent" target="_blank" aria-label="External Link">
+                  <i class="bi bi-box-arrow-up-right" style="font-size: 22px;"></i>
+                </a>
+                
+              </div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title mb-0">MyBank Web App</h5>
+              <span class="text-muted">August 2024</span>
+            </div>
           </div>
         </div>
       </div>
-    
-      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+      
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4 project-card" style="display: none;"> <!-- Hidden by default -->
         <div class="card h-100 shadow-sm">
           
-            <img src="assets/img/sample.png" class="card-img-top" alt="MyBank Web App">
+          <img src="assets/img/univvv.png" class="project-img-top" alt="uniVVV Social v2" loading="lazy">
           
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">MyBank Web App</h5>
-            <p class="card-text">MyBank is an innovative online banking platform...</p>
-            
-              <a href="https://www.youtube.com/watch?v=UB7aueZu2GM&t" class="btn btn-primary mt-auto">View Project</a>
-            
-            
-              <a href="https://github.com/username/mybank-web-app" class="btn btn-secondary mt-2">View Repo</a>
-            
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <!-- Simple tag list with pipe separators and small text -->
+              <p class="text-muted mb-0 small">
+                
+                  Python | 
+                
+                  Django | 
+                
+                  JavaScript | 
+                
+                  SQL | 
+                
+                  Bootstrap CSS
+                
+              </p>
+              <div class="d-flex align-items-center">
+                
+                <a href="https://github.com/melissadeleonx/" class="text-muted hover-accent me-2" target="_blank" aria-label="GitHub Repository">
+                  <i class="bi bi-github" style="font-size: 20px;"></i> 
+                </a>
+                
+                
+                <a href="https://www.youtube.com/watch?v=NtdT9O3pYmI&t" class="text-muted hover-accent" target="_blank" aria-label="External Link">
+                  <i class="bi bi-box-arrow-up-right" style="font-size: 22px;"></i>
+                </a>
+                
+              </div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title mb-0">uniVVV Social v2</h5>
+              <span class="text-muted">July 2024</span>
+            </div>
           </div>
         </div>
       </div>
-    
-      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+      
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4 project-card" style="display: none;"> <!-- Hidden by default -->
         <div class="card h-100 shadow-sm">
           
-            <img src="assets/img/sample.png" class="card-img-top" alt="MyBank Web App">
+          <img src="assets/img/univvvflask.png" class="project-img-top" alt="uniVVV Social v1" loading="lazy">
           
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">MyBank Web App</h5>
-            <p class="card-text">MyBank is an innovative online banking platform...</p>
-            
-              <a href="https://www.youtube.com/watch?v=UB7aueZu2GM&t" class="btn btn-primary mt-auto">View Project</a>
-            
-            
-              <a href="https://github.com/username/mybank-web-app" class="btn btn-secondary mt-2">View Repo</a>
-            
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <!-- Simple tag list with pipe separators and small text -->
+              <p class="text-muted mb-0 small">
+                
+                  Python | 
+                
+                  Flask | 
+                
+                  JavaScript | 
+                
+                  SQL | 
+                
+                  Bootstrap CSS
+                
+              </p>
+              <div class="d-flex align-items-center">
+                
+                <a href="https://github.com/melissadeleonx/" class="text-muted hover-accent me-2" target="_blank" aria-label="GitHub Repository">
+                  <i class="bi bi-github" style="font-size: 20px;"></i> 
+                </a>
+                
+                
+                <a href="https://melissadeleon.com/uniVVV-version1/" class="text-muted hover-accent" target="_blank" aria-label="External Link">
+                  <i class="bi bi-box-arrow-up-right" style="font-size: 22px;"></i>
+                </a>
+                
+              </div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title mb-0">uniVVV Social v1</h5>
+              <span class="text-muted">December 2023</span>
+            </div>
           </div>
         </div>
       </div>
-    
-      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+      
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4 project-card" style="display: none;"> <!-- Hidden by default -->
         <div class="card h-100 shadow-sm">
           
-            <img src="assets/img/sample.png" class="card-img-top" alt="MyBank Web App">
+          <img src="assets/img/science-wiki.png" class="project-img-top" alt="Science Wiki" loading="lazy">
           
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">MyBank Web App</h5>
-            <p class="card-text">MyBank is an innovative online banking platform...</p>
-            
-              <a href="https://www.youtube.com/watch?v=UB7aueZu2GM&t" class="btn btn-primary mt-auto">View Project</a>
-            
-            
-              <a href="https://github.com/username/mybank-web-app" class="btn btn-secondary mt-2">View Repo</a>
-            
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <!-- Simple tag list with pipe separators and small text -->
+              <p class="text-muted mb-0 small">
+                
+                  Python | 
+                
+                  Django | 
+                
+                  JavaScript | 
+                
+                  API | 
+                
+                  Heroku CLI
+                
+              </p>
+              <div class="d-flex align-items-center">
+                
+                <a href="https://github.com/melissadeleonx/science-wiki" class="text-muted hover-accent me-2" target="_blank" aria-label="GitHub Repository">
+                  <i class="bi bi-github" style="font-size: 20px;"></i> 
+                </a>
+                
+                
+                <a href="https://melissadeleon.com/wiki/" class="text-muted hover-accent" target="_blank" aria-label="External Link">
+                  <i class="bi bi-box-arrow-up-right" style="font-size: 22px;"></i>
+                </a>
+                
+              </div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title mb-0">Science Wiki</h5>
+              <span class="text-muted">May 2024</span>
+            </div>
           </div>
         </div>
       </div>
-    
-      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+      
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4 project-card" style="display: none;"> <!-- Hidden by default -->
         <div class="card h-100 shadow-sm">
           
-            <img src="assets/img/sample.png" class="card-img-top" alt="MyBank Web App">
+          <img src="assets/img/cs50-community-notes.png" class="project-img-top" alt="CS50 Community Notes" loading="lazy">
           
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">MyBank Web App</h5>
-            <p class="card-text">MyBank is an innovative online banking platform...</p>
-            
-              <a href="https://www.youtube.com/watch?v=UB7aueZu2GM&t" class="btn btn-primary mt-auto">View Project</a>
-            
-            
-              <a href="https://github.com/username/mybank-web-app" class="btn btn-secondary mt-2">View Repo</a>
-            
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <!-- Simple tag list with pipe separators and small text -->
+              <p class="text-muted mb-0 small">
+                
+                  Jekyll | 
+                
+                  HTML | 
+                
+                  Markdown | 
+                
+                  CSS | 
+                
+                  GIT
+                
+              </p>
+              <div class="d-flex align-items-center">
+                
+                <a href="https://github.com/melissadeleonx/cs50-community-notes" class="text-muted hover-accent me-2" target="_blank" aria-label="GitHub Repository">
+                  <i class="bi bi-github" style="font-size: 20px;"></i> 
+                </a>
+                
+                
+                <a href="https://melissadeleon.com/cs50-community-notes/" class="text-muted hover-accent" target="_blank" aria-label="External Link">
+                  <i class="bi bi-box-arrow-up-right" style="font-size: 22px;"></i>
+                </a>
+                
+              </div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title mb-0">CS50 Community Notes</h5>
+              <span class="text-muted">January 2024</span>
+            </div>
           </div>
         </div>
       </div>
-    
-      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+      
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4 project-card" style="display: none;"> <!-- Hidden by default -->
         <div class="card h-100 shadow-sm">
           
-            <img src="assets/img/sample.png" class="card-img-top" alt="MyBank Web App">
+          <img src="assets/img/visitsicilynow-image.png" class="project-img-top" alt="Visit Sicily Now" loading="lazy">
           
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">MyBank Web App</h5>
-            <p class="card-text">MyBank is an innovative online banking platform...</p>
-            
-              <a href="https://www.youtube.com/watch?v=UB7aueZu2GM&t" class="btn btn-primary mt-auto">View Project</a>
-            
-            
-              <a href="https://github.com/username/mybank-web-app" class="btn btn-secondary mt-2">View Repo</a>
-            
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <!-- Simple tag list with pipe separators and small text -->
+              <p class="text-muted mb-0 small">
+                
+                  Jekyll | 
+                
+                  HTML | 
+                
+                  JavaScript | 
+                
+                  Bootstrap CSS
+                
+              </p>
+              <div class="d-flex align-items-center">
+                
+                <a href="https://github.com/melissadeleonx/visit-sicily" class="text-muted hover-accent me-2" target="_blank" aria-label="GitHub Repository">
+                  <i class="bi bi-github" style="font-size: 20px;"></i> 
+                </a>
+                
+                
+                <a href="https://melissadeleon.com/visit-sicily/" class="text-muted hover-accent" target="_blank" aria-label="External Link">
+                  <i class="bi bi-box-arrow-up-right" style="font-size: 22px;"></i>
+                </a>
+                
+              </div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title mb-0">Visit Sicily Now</h5>
+              <span class="text-muted">August 2023</span>
+            </div>
           </div>
         </div>
       </div>
-    
-      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+      
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4 project-card" style="display: none;"> <!-- Hidden by default -->
         <div class="card h-100 shadow-sm">
           
-            <img src="assets/img/sample.png" class="card-img-top" alt="MyBank Web App">
+          <img src="assets/img/mybank-dash.png" class="project-img-top" alt="CS50 Mailbox" loading="lazy">
           
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">MyBank Web App</h5>
-            <p class="card-text">MyBank is an innovative online banking platform...</p>
-            
-              <a href="https://www.youtube.com/watch?v=UB7aueZu2GM&t" class="btn btn-primary mt-auto">View Project</a>
-            
-            
-              <a href="https://github.com/username/mybank-web-app" class="btn btn-secondary mt-2">View Repo</a>
-            
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <!-- Simple tag list with pipe separators and small text -->
+              <p class="text-muted mb-0 small">
+                
+                  Python | 
+                
+                  Django | 
+                
+                  JavaScript | 
+                
+                  API | 
+                
+                  Bootstrap CSS
+                
+              </p>
+              <div class="d-flex align-items-center">
+                
+                <a href="https://github.com/melissadeleonx/" class="text-muted hover-accent me-2" target="_blank" aria-label="GitHub Repository">
+                  <i class="bi bi-github" style="font-size: 20px;"></i> 
+                </a>
+                
+                
+                <a href="https://www.youtube.com/watch?v=UB7aueZu2GM&t" class="text-muted hover-accent" target="_blank" aria-label="External Link">
+                  <i class="bi bi-box-arrow-up-right" style="font-size: 22px;"></i>
+                </a>
+                
+              </div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title mb-0">CS50 Mailbox</h5>
+              <span class="text-muted">June 2024</span>
+            </div>
           </div>
         </div>
       </div>
+      
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4 project-card" style="display: none;"> <!-- Hidden by default -->
+        <div class="card h-100 shadow-sm">
+          
+          <img src="assets/img/commerce.png" class="project-img-top" alt="Space Marketplace" loading="lazy">
+          
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <!-- Simple tag list with pipe separators and small text -->
+              <p class="text-muted mb-0 small">
+                
+                  Python | 
+                
+                  Django | 
+                
+                  JavaScript | 
+                
+                  HTML | 
+                
+                  Bootstrap CSS
+                
+              </p>
+              <div class="d-flex align-items-center">
+                
+                <a href="https://github.com/melissadeleonx/" class="text-muted hover-accent me-2" target="_blank" aria-label="GitHub Repository">
+                  <i class="bi bi-github" style="font-size: 20px;"></i> 
+                </a>
+                
+                
+                <a href="https://www.youtube.com/watch?v=UB7aueZu2GM&t" class="text-muted hover-accent" target="_blank" aria-label="External Link">
+                  <i class="bi bi-box-arrow-up-right" style="font-size: 22px;"></i>
+                </a>
+                
+              </div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title mb-0">Space Marketplace</h5>
+              <span class="text-muted">April 2024</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4 project-card" style="display: none;"> <!-- Hidden by default -->
+        <div class="card h-100 shadow-sm">
+          
+          <img src="assets/img/google-search.png" class="project-img-top" alt="Google Search Website" loading="lazy">
+          
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <!-- Simple tag list with pipe separators and small text -->
+              <p class="text-muted mb-0 small">
+                
+                  JavaScript | 
+                
+                  HTML | 
+                
+                  Bootstrap CSS
+                
+              </p>
+              <div class="d-flex align-items-center">
+                
+                <a href="https://github.com/melissadeleonx/" class="text-muted hover-accent me-2" target="_blank" aria-label="GitHub Repository">
+                  <i class="bi bi-github" style="font-size: 20px;"></i> 
+                </a>
+                
+                
+                <a href="https://www.youtube.com/watch?v=UB7aueZu2GM&t" class="text-muted hover-accent" target="_blank" aria-label="External Link">
+                  <i class="bi bi-box-arrow-up-right" style="font-size: 22px;"></i>
+                </a>
+                
+              </div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title mb-0">Google Search Website</h5>
+              <span class="text-muted">March 2024</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
     
+    <!-- Show More and Show Less Buttons -->
+    <div class="text-center mt-4">
+      <button id="show-more-btn" class="btn btn-success mx-2" style="display: none;">Show More</button>
+      <button id="show-less-btn" class="btn btn-outline-success mx-2" style="display: none;">Show Less</button>
+    </div>
   </div>
 </div>
 
-      </section>
+    </section>
+    
+    <section id="contact">
 
-    <main>
-      
-    </main>
-      
-    <footer class="footer border-top border-purple bg-dark w-100">
-    <div class="d-block text-start mt-4 bg-dark">
+      <div class="connecting-line rounded-circle glow"></div>
+      <div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+            <div class="mb-4 text-responsive">
+                <h2 class="display-4 mb-2">
+                    <span class="text-orange">1000% Contact Me!</span>
+                </h2>
+                <p class="fs-3  text-responsive">
+                    I’m ready to put my skills to work and excited to see what’s next. If you have a project or idea, let’s connect and collaborate!                </p>
+            </div>
+            <!-- Email Form -->
+            <div class="align-items-center justify-content-center text-center">  
+
+            <form action="" method="post" class="email-form">
+                <div class="form-group">
+                    <div class="input-group w-100 w-lg-75">
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-success btn-lg d-flex align-items-center justify-content-center"><img src="assets/img/icons8-son-goku-48.png" alt="Son Goku" class="goku-face" /> Send</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+
+    </section>
+    
+    <footer class="footer border-top border-purple w-100">
+    <div class="d-block text-start mt-4">
         <div class="m-4">
             &copy; 2024 Melissa De Leon <br>
-            <p><a href="https://melissadeleon.com" target="_blank" class="footer-link">My Portfolio website version 5</a> | Built with Jekyll and Gulp | Deployed on Github</p>
+            <p class="small"><a href="https://melissadeleon.com" target="_blank" class="hover-accent">My Portfolio website version 5</a> | Built with Jekyll and Gulp | Deployed on Github</p>
         </div>
     </div>
 </footer>
 
 
-      
     
 <!-- Bootstrap core JavaScript
 ================================================== -->
@@ -348,24 +1076,22 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <!-- Lottie Web library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.13/lottie.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap-color-mode.js"></script> -->
+
 
 <!-- Google Analytics -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-76N2RZQFV6"></script> -->
-<!-- <script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-76N2RZQFV6"></script>
+<script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-76N2RZQFV6');
-</script> -->
+</script>
 
-<!-- Index page - initialize Lottie animation -->
-    <!-- #TODO Add on script.js and make static file works -->
 
-        
-<!-- Custom Scripts in local file -->
-<script src="/assets/js/sweet-scroll.min.js"></script>
 <script src="/assets/js/main.js"></script>
 
 
+
   </body>
-  </html>
+</html>

@@ -1,8 +1,8 @@
 # Site settings
 title: Melissa De Leon Portfolio Website - Version 5
 description: Discover innovative Python projects by Melissa De Leon. Explore my Jekyll-powered portfolio showcasing dynamic web apps like CS50 Community Notes and the Django-based MyBank. Learn about my passion for Computer Science and Cybersecurity. Visit my GitHub to view code and connect.
-baseurl: "" 
 url: "http://localhost:4000" #Update to actual site url for production
+baseurl: "" 
 
 
 

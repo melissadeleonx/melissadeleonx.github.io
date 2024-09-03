@@ -1,0 +1,43 @@
+certificates:
+  - title: "CS50 Web Programming"
+    issuer: "Harvard University"
+    date: "September 2024"
+    description: "Completed CS50 Web Programming with Python and JavaScript including six projects"
+    image: "/assets/img/CS50W.png"
+    url: "https://certificates.cs50.io/be88f931-07d9-419d-a792-2ab1137c077e.pdf?size=letter"
+
+  - title: "CS50X Introduction to Computer Science"
+    issuer: "Harvard University"
+    date: "December 2023"
+    description: "Completed CS50x Introduction to Computer Science, including ten problem sets, nine labs, and one final projects"
+    image: "/assets/img/CS50X.png"
+    url: "https://certificates.cs50.io/5bb89bee-1225-4ac5-981a-5d75a17a0661.pdf?size=letter"
+
+  - title: "EDX HarvardX CS50x Introduction to Computer Science"
+    issuer: "EDX/HarvardX"
+    date: "December 2023"
+    description: "Completed the course study offered by HarvardX, an online learning initiative of Harvard University"
+    image: "/assets/img/HarvardEDX.png"
+    url: "https://courses.edx.org/certificates/cef15cace46045b4a84aa49f314170e9"
+    
+  - title: "C Programming Basics"
+    issuer: "LinkedIn"
+    date: "November 2023"
+    description: "Acquired foundational knowledge of C programming basics, from Flow Control, Variables and Pointers."
+    image: "/assets/img/Linkedin-Certificate-CProgramming.png"
+    url: "https://www.linkedin.com/learning/certificates/580417c3e416ac5be3237cb2e07776a5fbd69e801a7550cce110bb6961a77002?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BbLxg1JM%2FR1q8SL318zGqPA%3D%3D"
+
+  - title: "Introduction to Web Design and Development"
+    issuer: "LinkedIn"
+    date: "November 2023"
+    description: "Acquired foundational knowledge of Web Development from HTML to CSS and JavaScript"
+    image: "/assets/img/Linkedin-Certificate-WebDev.png"
+    url: "https://www.linkedin.com/learning/certificates/8d75ce725a898755b092dbefaf98a91a0fb3dbfa31d3c181f251756972e6edf5"
+
+  - title: "Introduction to Python Programming Language"
+    issuer: "LinkedIn"
+    date: "November 2023"
+    description: "Acquired foundational knowledge in Python Programming."
+    image: "/assets/img/Linkedin-Certificate-Python-Programming.png"
+    url: "https://www.linkedin.com/learning/certificates/edca1028de539b8aade13e0f3b29a65a1c7551a680f2f6b0b98b74e103a0c095?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BbLxg1JM%2FR1q8SL318zGqPA%3D%3D"
+

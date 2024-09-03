@@ -8,10 +8,26 @@
 document.addEventListener('DOMContentLoaded', function() {
     const button = document.getElementById('morph-button');
     const words = [
-        "My Bank", "Ang Aking Bangko", "Mi Banco", "Ma Banque", "Meine Bank", "La Mia Banca", "Meu Banco", 
-        "Mijn Bank", "Мой Банк", "我的银行", "私の銀行", "나의 은행", 
-        "بنكي", "मेरा बैंक", "Benim Bankam", "Min Bank", "Min Bank", 
-        "Min Bank", "Mój Bank", "Η Τράπεζά Μου", "הבנק שלי", "Minun Pankkini"
+        "<study><code><debug><repeat>", 
+        "学习。编码。调试。重复。", 
+        "mag-aral. mag-code. mag-debug. ulitin.", 
+        "studia. codifica. eseguire il debug. ripetere.", 
+        "學習。編碼。除錯。重複。", 
+        "étudier. coder. déboguer. répéter.", 
+        "studieren. programmieren. debuggen. wiederholen.", 
+        "estudar. codificar. depurar. repetir.", 
+        "学ぶ。コーディング。デバッグ。繰り返す。", 
+        "учиться. кодировать. отлаживать. повторять.", 
+        "학습하다. 코딩하다. 디버깅하다. 반복하다.", 
+        "دراسة. برمجة. تصحيح الأخطاء. كرر.", 
+        "अध्ययन करें। कोड करें। डिबग करें। दोहराएं।", 
+        "অধ্যয়ন করুন। কোড করুন। ডিবাগ করুন। পুনরাবৃত্তি করুন।", 
+        "çalış. kodla. hata ayıkla. tekrar et.", 
+        "estuderen. coderen. foutopsporen. herhalen.", 
+        "studera. koda. felsök. upprepa.", 
+        "studer. kode. feilsøk. gjenta.", 
+        "studer. kode. fejlret. gentag.", 
+        "ucz się. koduj. debuguj. powtarzaj."
     ];
 
     let currentIndex = 0;

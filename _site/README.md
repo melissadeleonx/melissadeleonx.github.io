@@ -10,6 +10,7 @@ This is my personal portfolio website, showcasing my projects and skills as a we
    - [Install Node.js Modules (Optional)](#install-nodejs-modules-optional)
 4. [Development](#development)
    - [Running the Local Server](#running-the-local-server)
+   - [Gulp Setup](#gulp-setup)
    - [Additional Commands](#additional-commands)
 5. [Configuration](#configuration)
 6. [Building and Deployment](#building-and-deployment)
@@ -59,6 +60,45 @@ To serve your Jekyll site locally, use:
 ```bash
 bundle exec jekyll serve
 ```
+
+### Gulp Setup
+Gulp is used in this project to automate tasks like CSS and JS minification, image optimization, and live reloading. Below are the steps to set up Gulp and run tasks:
+
+#### 1. Install Node.js Modules (If not already installed): Ensure Node.js and npm are installed. Then, install the necessary npm packages:
+```bash
+npm install
+```
+
+#### 2. Common Gulp Tasks:
+- **Build and Minify JavaScript:**
+  ```bash
+  gulp js
+  ```
+  This task concatenates and minifies all JavaScript files in the src/js directory into assets/js/main.js.
+
+- **Compile SASS to CSS:**
+  ```bash
+  gulp sass
+  ```
+  This task compiles SASS files from src/styles to CSS and minifies them into assets/css.
+
+- **Optimize Images:**
+  ```bash
+  gulp imagemin
+  ```
+  This task minifies images from src/img and outputs them to assets/img.
+
+- **Watch for Changes:**
+  ```bash
+  gulp watch
+  ```
+  This task watches for changes in source files and automatically runs the appropriate tasks and reloads the browser.
+
+#### 3. Running Gulp with Jekyll: To run all tasks along with Jekyll and BrowserSync for development, simply execute:
+  ```bash
+  gulp
+  ```
+
 ### Additional Commands
 * Watch for changes and automatically rebuild:
 ```bash

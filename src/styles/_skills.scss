@@ -1,0 +1,38 @@
+// Custom styles for the skills section
+
+#skillsSection {
+  opacity: 0;
+  transform: translateX(100px);     
+  transition: opacity .5s ease-out, transform .5s ease-out;
+  }
+  
+  #skillsSection.visible {
+  opacity: 1;
+  transform: translateX(0);  
+  }
+
+  #skillsCard {
+    position: relative;
+    overflow: hidden;       
+    opacity: 0;   
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    transform: translateY(50px);
+    max-width: 600px;
+    z-index: 1; 
+    }
+    
+    #skillsCard.visible {
+      opacity: 1;         
+      transform: translateY(0);
+    }
+
+    /* Add a fade-in transition for buttons */
+#tagsContainer button {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: none;
+}
+
+#tagsContainer button.show {
+  opacity: 1;
+}

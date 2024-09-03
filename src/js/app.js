@@ -1,36 +1,31 @@
-/* sweetScroll load */
-document.addEventListener("DOMContentLoaded", function () {
-  new SweetScroll({/* some options */});
 
-  var sections = document.querySelectorAll('.animated-section');
 
-var handleScrollAnimations = function () {
-  sections.forEach(function (section, index) {
-    var sectionTop = section.getBoundingClientRect().top;
-    var windowHeight = window.innerHeight;
+document.addEventListener('DOMContentLoaded', function () {
+    const capsuleContainer = document.querySelector('.capsule-container');
+    const fireBuster = document.querySelector('.fire-buster');
 
-    // Adjust the animation properties
-    var offset = 50; 
-    var delay = 0.1; 
-    var duration = 1.0; 
-
-    // Check if the section is in the viewport
-    if (sectionTop < windowHeight * 0.75) {
-      // Apply slide-up and fade-in animation
-      section.style.opacity = 1;
-      section.style.transform = 'translateY(0)';
-      section.style.transition = 'opacity ' + duration + 's ease-in-out, transform ' + duration + 's ease-in-out ' + delay + 's';
-    } else {
-      // Hide the section if it's not in the viewport
-      section.style.opacity = 0;
-      section.style.transform = 'translateY(' + offset + 'px)';
-      section.style.transition = 'opacity ' + duration + 's ease-in-out, transform ' + duration + 's ease-in-out';
+    // Function to animate the capsuleContainer and fire-buster on page load
+    function animateCapsuleContainer() {
+        capsuleContainer.classList.add('animate-capsule'); // Animate the container
+        fireBuster.classList.add('animate-fire-buster'); // Animate the fire buster effect
     }
-  });
-};
 
-// Attach the handleScrollAnimations function to the 'scroll' event
-window.addEventListener('scroll', handleScrollAnimations);
+    // Initial animation on page load
+    animateCapsuleContainer();
 
-  
-}, false);
+    // Function to hide elements after animation ends
+    function hideAfterAnimation(event) {
+        // Ensure this is the correct animation/transition event
+        if (event.target === capsuleContainer) {
+            capsuleContainer.style.display = 'none';
+        }
+        if (event.target === fireBuster) {
+            fireBuster.style.display = 'none';
+        }
+    }
+
+    // Listen for the transitionend event on capsuleContainer
+    capsuleContainer.addEventListener('transitionend', hideAfterAnimation);
+    // Listen for the animationend event on fireBuster
+    fireBuster.addEventListener('animationend', hideAfterAnimation);
+});

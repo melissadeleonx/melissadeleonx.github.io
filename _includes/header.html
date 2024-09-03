@@ -7,60 +7,82 @@
     </button>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Melissa De Leon Portfolio</h5>
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><a href="/">Melissa De Leon Portfolio</a></h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">About</a>
+            <a class="nav-link hover-accent" aria-current="page" href="#header">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Skills</a>
+            <a class="nav-link hover-accent" aria-current="page" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hover-accent" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hover-accent" href="#certificates">Certificates</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link hover-accent" href="#projects" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Projects
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Web App</a></li>
-              <li><a class="dropdown-item" href="#">Mobile App</a></li>
-              <li><a class="dropdown-item" href="#">Desktop App</a></li>
+              <li><a class="dropdown-item hover-accent" href="#projects">Web App</a></li>
+              <li><a class="dropdown-item hover-accent" href="#">Mobile App</a></li>
+              <li><a class="dropdown-item hover-accent" href="#">Desktop App</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">My Collections of Websites</a></li>
+              <li><a class="dropdown-item hover-accent" href="#">My Collections of Websites</a></li>
             </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hover-accent" href="#contact">Contact Me</a>
           </li>
         </ul>
         <form class="d-flex mt-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-purple" type="submit">Search</button>
+          <button class="btn btn-success" type="submit">Search</button>
         </form>
       </div>
     </div>
   </div>
 </nav>
 
-<div class="d-flex flex-column align-items-center justify-content-center vh-100 text-center border-bottom border-purple">  
+<div class="d-flex flex-column align-items-center justify-content-center vh-100 text-center">  
   <!-- Name and Title -->
   <div class="text-content p-2">
-    <h1 class="display-1">{{ site.username }}</h1>
-    <h3 class="display-6">{{ site.user_title }}</h3>
+    <h1 class="display-1 display-md-1">{{ site.username }}</h1>
+    <h3 class="display-6 display-md-3 text-muted">{{ site.user_title }}</h3>
   </div>
   
   <!-- Action Buttons -->
-  <div class="d-flex gap-2 mb-2 p-4">
-    <a href="mailto:primavita19@gmail.com" class="btn btn-dark btn-lg me-2">Email Me</a>
-    <a href="#" class="btn btn-outline-dark btn-lg">View My CV</a>
+  <div class="d-flex flex-column flex-md-row gap-2 mb-2 p-4">
+    <a href="mailto:primavita19@gmail.com" class="btn btn-success btn-lg me-2 mb-2 mb-md-0"><i class="bi bi-envelope"></i> Email Me
+    </a>
+    <a href="#" class="btn btn-outline-success btn-lg"><i class="bi bi-file-earmark-text"></i> View My CV
+    </a>
   </div>
   
   <!-- Social Links -->
-  <div class="socials">
+  <div class="socials mt-3">
     {% for social in site.data.socials.socials %}
-    <a href="{{ social.url }}" target="_blank" title="{{ social.name }}" class="social-icon">
+    <a href="{{ social.url }}" target="_blank" title="{{ social.name }}" class="social-icon mx-2">
       <i class="bi {{ social.icon }}"></i>
     </a>
     {% endfor %}
   </div>
 </div>
+
+
+<div class="capsule-container">
+  <!-- Burst effect container -->
+  <div class="burst-effect"></div>
+  <!-- Capsule Image -->
+  <img id="capsuleAnimation" src="/assets/img/capsule.png" alt="Capsule Corp Logo" class="capsule_image">
+  <div class="fire-buster left animate-fire-buster"></div>
+  <div class="fire-buster right animate-fire-buster"></div>
+</div>
+

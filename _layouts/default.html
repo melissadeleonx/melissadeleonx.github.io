@@ -1,31 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark"> 
   {% include head.html %}
   <body>
-      <section id="header" class="bg-white">
+    {% include theme-toggler.html %}
+
+    <section id="header">
+      <div class="connecting-line rounded-circle glow"></div>
       {% include header.html %}
-      </section>
-      <section id="versions">
-        {% include versions.html %}
     </section>
-      
-      <section id="about">
-          {% include about.html %}
-      </section>
-      
+    
+    <section id="versions">
+      <div class="connecting-line rounded-circle glow"></div>
+      {% include versions.html %}
+    </section>
+    
+    <section id="about">
+      <div class="connecting-line rounded-circle glow"></div>
+      {% include about.html %}
+    </section>
+    
+    <section id="skills">
+      <div class="connecting-line rounded-circle glow"></div>
+      {% include skills.html %}
+    </section>
+    
+    <section id="certificates">
 
-      
-      <section id="projects">
-          {% include projects.html %}
-      </section>
+      <div class="connecting-line rounded-circle glow"></div>
+      {% include certificates.html %}
+    </section>
+    
+    <section id="projects">
+      <div class="connecting-line rounded-circle glow"></div>
+    </div>
+      {% include projects.html %}
+    </section>
+    
+    <section id="contact">
 
-    <main>
-      {{ content }}
-    </main>
-      
+      <div class="connecting-line rounded-circle glow"></div>
+      {% include contact.html %}
+    </section>
+    
     {% include footer.html %}
-      
     {% include scripts.html %}
 
   </body>
-  </html>
+</html>

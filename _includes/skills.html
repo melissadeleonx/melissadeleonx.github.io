@@ -1,0 +1,35 @@
+<!-- Skills Section -->
+<div class="col-12 col-lg-10 mx-auto text-center my-5">
+    <!-- Section Header -->
+    <div class="d-none d-md-flex flex-column flex-md-row mb-4">
+        <h3 class="mb-0 me-md-3">
+            Skills
+        </h3>
+    </div>
+
+    <!-- Content Wrapper with Margins -->
+    <div class="container">
+        <!-- Row with margins for consistent spacing -->
+        <div class="row mx-3 d-flex flex-wrap justify-content-center align-items-center">
+            <!-- First Column for Desktop -->
+            <div class="col-12 col-md-6 mb-4" id="skillsSection">
+                <p class="lead">
+                    I believe that the more you learn, the more you want to learn. This mindset drives my continuous exploration of new technologies and skills. Below are the technologies I am familiar with so far. I am currently completing courses in Cybersecurity and AI, and I look forward to expanding this list as I conquer new fields.
+                </p>
+                <div class="d-flex flex-wrap justify-content-center" id="tagsContainer">
+                    <!-- Example Buttons -->
+                    {% for skill in site.data.skills.skills %}
+                        <button class="btn btn-success btn-sm m-1">{{ skill.item }}</button>
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <!-- Second Column for Desktop -->
+            <div class="col-12 col-md-6 mb-4" id="skillsCard">
+                <div class="card rounded">
+                    <img src="/assets/img/cardport.png" loading="lazy" alt="Melissa De Leon Coding Skills" class="card-img-top rounded img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

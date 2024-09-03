@@ -1,0 +1,138 @@
+
+  /* VS Code Container Styling */
+.vscode-window {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: text;
+
+  }
+  
+  /* Tab Bar */
+  .vscode-tab-bar {
+    background-color: #252526;
+    border-bottom: 1px solid #3c3c3c;
+  }
+  
+  .vscode-tab {
+    padding: 10px 15px;
+    color: #d4d4d4;
+    font-family: 'Consolas', 'Courier New', monospace;
+    cursor: pointer;
+  }
+  
+  .vscode-tab.active {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+  
+  /* Sidebar */
+  .vscode-sidebar {
+    background-color: #333333;
+    width: 50px;
+  }
+  
+  .vscode-sidebar i {
+    color: #d4d4d4;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Main Editor Area */
+  .vscode-editor {
+    flex-grow: 1;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    font-family: 'Consolas', 'Courier New', monospace;
+    overflow: auto;
+    max-height: 500px; 
+  }
+  
+  /* Code Styling */
+  .vscode-code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    color: #d4d4d4; 
+    background-color: #1e1e1e; 
+    padding: 10px;
+    border-radius: 4px;
+}
+  
+  .vscode-code .python .keyword { color: #569cd6; }
+  .vscode-code .python .built_in { color: #4ec9b0; }
+  .vscode-code .python .string { color: #d69d85; }
+  .vscode-code .python .comment { color: #6a9955; }
+  .vscode-code .python .function { color: #dcdcaa; }
+  
+  /* Scrollbar Styling */
+  .vscode-editor::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .vscode-editor::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+  }
+  
+  .vscode-editor::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+.bio-section-container {
+    position: relative;
+  }
+  
+
+#bioSection {
+  position: relative;
+  z-index: 1; 
+  opacity: 0;
+  transform: translateX(100px); 
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  #bioSection.visible {
+  opacity: 1;
+  transform: translateX(0);
+  
+  }
+
+  /* Burst effect */
+.bio-section-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.9) 0%, rgba(0, 255, 255, 0) 50%);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+}
+
+/* Show the burst effect */
+.bio-section-container.active::before {
+  opacity: 1;
+  animation: pulse 2s;
+
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}

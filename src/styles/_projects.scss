@@ -1,122 +1,37 @@
-#projects {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 90%;
-  max-width: 960px;
-  margin: 0 auto;
-  @media only screen and (min-width: $cut) {
-    width: 80%;
-  }
+/* Ensure no space between card and image */
+.project-card {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+  border-radius: 8px; 
+  overflow: hidden; 
+
 }
 
-.user-projects {
-  margin: 20px auto;
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  h5 {
-    margin: 0;
-  }
-  li {
-    color: $main;
-    font-size: 1.1rem;
-  }
-  p {
-    margin-right: 5px;
-  }
+.project-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  border-radius: 8px; 
+  overflow: hidden; 
 }
 
-.contents {
-  @media only screen and (min-width: $cut) {
-    margin-left: 0;
-    width: 48%;
-  }
+.project-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0; 
 }
 
-.contents-right {
-  @media only screen and (min-width: $cut) {
-    float: right;
-    margin-top: -5%;
-    width: 48%;
-  }
-}
-.images-right {
-  @media only screen and (min-width: $cut) {
-    float: right;
-    width: 48%;
-  }
-  img {
-    @media only screen and (min-width: $cut) {
-      float: right;
-    }
-  }
+/* Ensure the card body respects the rounded corners */
+.project-card .card-body {
+  border-radius: 8px 8px 0 0; 
 }
 
-.images-left {
-  @media only screen and (min-width: $cut) {
-    float: left;
-    width: 48%;
-  }
-  img {
-    @media only screen and (min-width: $cut) {
-      float: left;
-    }
-  }
+.text-orange {
+  color: $orange
 }
 
-.project-link {
-  display: inline-block;
-  margin: 10px 0px;
-  padding: 10px;
-  color: $main;
-  background-color: transparent;
-  border: 1px solid $main;
-  border-radius: 10px;
-  text-align: center;
-  outline: none;
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.3s ease-out,
-              background-color 0.3s ease-out,
-              border-color 0.3s ease-out;
-  &:hover {
-    // background-color: $purple;
-    background: #ebe419;
-    border-color: $purple;
-    color: $main;
-    font-weight: bold;
-    transition: color 0.3s ease-in,
-                background-color 0.3s ease-in,
-                border-color 0.3s ease-in,
-                font-weight 0.3s ease-in; 
-  }
-  &:active {
-    // background-color: $purple;
-    background: #ebe419;
-    border-color: $purple;
-    color: $main;
-    font-weight: bold;
-    transition: color 0.3s ease-in,
-                background-color 0.3s ease-in,
-                border-color 0.3s ease-in,
-                font-weight 0.3s ease-in;
-  }
-}
-
-.horizontal-list {
-  list-style-type: none;
-  padding: 0;
-}
-
-.horizontal-list li {
-  display: inline-block;
-  margin-right: 10px; 
-}
-
-.horizontal-list li:before {
-  content: "\2022"; 
-  margin-right: 5px; 
+.hover-accent:hover i {
+  color: $orange; 
+  transform: scale(1.1); 
+  transition: color 0.3s ease, transform 0.3s ease; 
 }

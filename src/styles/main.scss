@@ -1,9 +1,6 @@
-@import "lib/normalize";
-@import "lib/fontawesome";
-@import "lib/devicon";
-/* Import Bootstrap Icons and Mona Sans font */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css');
+
 @import url('https://fonts.googleapis.com/css2?family=Mona+Sans:wght@700&display=swap');
+
 
 
 @import 'vars';
@@ -12,5 +9,9 @@
 @import 'header';
 @import 'versions';
 @import 'about';
+@import 'skills';
+@import 'certificates';
 @import 'projects';
 @import 'footer';
+@import 'theme-toggler';
+

@@ -1,24 +1,67 @@
-<h2 class="text-center my-4">Projects</h2>
-<div class="container py-5">
-  <div class="row justify-content-center">
-    {% for project in site.data.projects.projects %}
-      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+<!-- Projects Section -->
+<div class="col-12 col-lg-10 mx-auto text-center my-5">
+  <!-- Section Header -->
+  <div class="d-none d-md-flex flex-column flex-md-row mb-4">
+    <h3 class="mb-0 me-md-3">
+      Projects
+    </h3>
+  </div>
+
+  
+  <div class="col-12 col-md">
+    <p class="display-4 mb-0 text-responsive">
+      <span class="text-orange">My Pride and Joy</span><br>
+      Scalable web applications built with the tech stacks I've mastered along the way.
+    </p>
+</div>
+
+
+
+  <!-- Content Wrapper with Margins -->
+  <div class="container mt-5">
+    <!-- Row with margins for consistent spacing -->
+    <div id="projects-container" class="row mx-3 d-flex flex-wrap justify-content-center">
+      {% for project in site.data.projects.projects %}
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4 project-card" style="display: none;"> <!-- Hidden by default -->
         <div class="card h-100 shadow-sm">
           {% if project.image %}
-            <img src="{{ project.image }}" class="card-img-top" alt="{{ project.title }}">
+          <img src="{{ project.image }}" class="project-img-top" alt="{{ project.title }}" loading="lazy">
           {% endif %}
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">{{ project.title }}</h5>
-            <p class="card-text">{{ project.description }}</p>
-            {% if project.url %}
-              <a href="{{ project.url }}" class="btn btn-primary mt-auto">View Project</a>
-            {% endif %}
-            {% if project.repo %}
-              <a href="{{ project.repo }}" class="btn btn-secondary mt-2">View Repo</a>
-            {% endif %}
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <!-- Simple tag list with pipe separators and small text -->
+              <p class="text-muted mb-0 small">
+                {% for tag in project.tags %}
+                  {{ tag }}{% unless forloop.last %} | {% endunless %}
+                {% endfor %}
+              </p>
+              <div class="d-flex align-items-center">
+                {% if project.repo %}
+                <a href="{{ project.repo }}" class="text-muted hover-accent me-2" target="_blank" aria-label="GitHub Repository">
+                  <i class="bi bi-github" style="font-size: 20px;"></i> 
+                </a>
+                {% endif %}
+                {% if project.url %}
+                <a href="{{ project.url }}" class="text-muted hover-accent" target="_blank" aria-label="External Link">
+                  <i class="bi bi-box-arrow-up-right" style="font-size: 22px;"></i>
+                </a>
+                {% endif %}
+              </div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title mb-0">{{ project.title }}</h5>
+              <span class="text-muted">{{ project.date }}</span>
+            </div>
           </div>
         </div>
       </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
+    
+    <!-- Show More and Show Less Buttons -->
+    <div class="text-center mt-4">
+      <button id="show-more-btn" class="btn btn-success mx-2" style="display: none;">Show More</button>
+      <button id="show-less-btn" class="btn btn-outline-success mx-2" style="display: none;">Show Less</button>
+    </div>
   </div>
 </div>

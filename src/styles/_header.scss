@@ -1,10 +1,7 @@
-// Header CSS
-
 .text-content h1, .text-content h3 {
-  padding: 0;
-  margin-bottom: 0;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
   font-weight: bold;
-  color: $main;
 }
 
 .d-flex.gap-2 {
@@ -12,7 +9,6 @@
   margin-bottom: 0.5rem; 
 }
 
-/* Custom styles for social media icons */
 .socials {
   display: flex;
   justify-content: center;
@@ -21,18 +17,159 @@
 }
 
 .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 3rem;
-  color: $main; 
   transition: color 0.3s ease;
   margin: 0 1rem;
 }
 
 .social-icon:hover {
-  color: $purple;
+  color: $orange;
 }
 
 
-.border-purple {
-  border-color: $purple !important; 
-  border-width: 5px !important;
+.capsule-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: auto;
+  height: auto;
+  transition: top 3s ease-out;
+}
+
+.capsule_image {
+  position: relative;
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+.capsule_image:hover {
+  border-radius: 50%; 
+  box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.8);
+  transform: scale(1.05) translateY(-5px);
+}
+
+.fire-buster {
+  position: absolute;
+  width: 50px;
+  height: 200px;
+  background-image: url('/assets/img/fire.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50% 50% 30% 30%;
+  transform: rotate(0deg);
+  z-index: -1;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.fire-buster.left {
+  left: 20%;
+  bottom: -20%;
+}
+
+.fire-buster.right {
+  right: 20%;
+  bottom: -20%;
+}
+
+.animate-capsule {
+  top: 50%;
+}
+
+.animate-fire-buster {
+  animation: fireBuster 2s infinite;
+}
+
+@keyframes fireBuster {
+  0% {
+    width: 100px;
+    height: 200px;
+    opacity: 1;
+  }
+  50% {
+    width: 150px;
+    height: 300px;
+    opacity: 0.8;
+  }
+  100% {
+    width: 100px;
+    height: 200px;
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 767.98px) {
+  .btn-xs {
+    padding: 0.25rem 0.5rem; 
+    font-size: 0.75rem; 
+  }
+
+  .capsule-container {
+    // position: fixed; 
+    // left: 50%;
+    // top: 100%; 
+    transform: translate(-50%, -100%); 
+    width: 150px; 
+    height: 150px; 
+    z-index: 1000;
+    transition: top 3s ease-out; 
+  }
+
+  .capsule_image {
+    width: 100%; 
+    height: auto;
+  }
+
+  .capsule_image:hover {
+    border-radius: 50%; 
+    box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.8);
+    transform: scale(1.05) translateY(-5px);
+  }
+
+  .fire-buster {
+    width: 30px; 
+    height: 120px; 
+  }
+
+  .fire-buster.left {
+    left: 10%; 
+    bottom: -15%; 
+  }
+
+  .fire-buster.right {
+    right: 10%; 
+    bottom: -15%; 
+  }
+
+  .animate-capsule {
+    top: 100%;
+  }
+  
+  .animate-fire-buster {
+    animation: fireBuster 2s infinite;
+  }
+
+  @keyframes fireBuster {
+    0% {
+      width: 50px;
+      height: 100px;
+      opacity: 1;
+    }
+    50% {
+      width: 75px;
+      height: 150px;
+      opacity: 0.8;
+    }
+    100% {
+      width: 50px;
+      height: 100px;
+      opacity: 1;
+    }
+  }
 }
