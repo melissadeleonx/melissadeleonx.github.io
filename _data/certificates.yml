@@ -10,7 +10,7 @@ certificates:
     issuer: "Harvard University"
     date: "December 2023"
     description: "Completed CS50x Introduction to Computer Science, including ten problem sets, nine labs, and one final projects"
-    image: "/assets/img/HarvardEDX.png"
+    image: "/assets/img/CS50x.png"
     url: "https://certificates.cs50.io/5bb89bee-1225-4ac5-981a-5d75a17a0661.pdf?size=letter"
 
   - title: "EDX HarvardX CS50x Introduction to Computer Science"
