@@ -4,17 +4,6 @@
     <title>CSRF Test Page</title>
 </head>
 <body>
-    <h1>CSRF Test Page</h1>
-    <form id="csrf-form" action="https://accounts.google.com/v3/signin/identifier" method="GET">
-        <input type="hidden" name="continue" value="https://console.cloud.google.com/apis/credentials?project">
-        <input type="hidden" name="followup" value="https://console.cloud.google.com/apis/credentials?project">
-        <input type="hidden" name="service" value="cloudconsole">
-        <input type="hidden" name="flowName" value="GlifWebSignIn">
-        <input type="hidden" name="flowEntry" value="ServiceLogin">
-    </form>
-    <script>
-        // Automatically submit the form when the page loads
-        document.getElementById('csrf-form').submit();
-    </script>
+
 </body>
 </html>
