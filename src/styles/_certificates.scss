@@ -13,14 +13,7 @@
 }
 
 .certificate-card:hover {
-    // transform: translateY(-5px);
-    box-shadow: 
-    0 4px 8px rgba(0, 0, 0, 0.2), /* Subtle shadow */
-    0 0 15px rgba(255, 255, 255, 0.3); /* Light outer glow */
-  transform: perspective(500px) rotateX(0deg) rotateY(0deg); /* Initial 3D transform */
-  transition: 
-    box-shadow 0.3s ease, /* Smooth shadow transition */
-    transform 0.3s ease; /* Smooth transform transition */
+    transform: translateY(-5px);
     
 }
 
@@ -57,4 +50,10 @@
 .arrow-more-btn:hover {
     color: $yellow;
     text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .certificate-card-image {
+        height: 250px;
+    }
 }
