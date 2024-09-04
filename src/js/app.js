@@ -28,4 +28,12 @@ document.addEventListener('DOMContentLoaded', function () {
     capsuleContainer.addEventListener('transitionend', hideAfterAnimation);
     // Listen for the animationend event on fireBuster
     fireBuster.addEventListener('animationend', hideAfterAnimation);
+
+    var animation = lottie.loadAnimation({
+        container: document.getElementById('lottieAnimation'), // the DOM element to contain the animation
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: '/assets/lottie/girl.json'
+    });
 });

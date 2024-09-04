@@ -68,14 +68,22 @@ gulp.task('imagemin', function() {
         .pipe(gulp.dest('assets/img/'))
 });
 
+// Copy Lottie files
+gulp.task('lottie', function() {
+    return gulp.src('src/lottie/**/*.json')
+        .pipe(plumber())
+        .pipe(gulp.dest('assets/lottie/'));
+});
+
 // Watch files
 gulp.task('watch', function() {
     gulp.watch('src/styles/**/*.scss', gulp.series(['sass', 'jekyll-rebuild']));
     gulp.watch('src/js/**/*.js', gulp.series(['js', 'jekyll-rebuild']));
     gulp.watch('src/fonts/**/*.{ttf,woff,woff2}', gulp.series(['fonts']));
     gulp.watch('src/img/**/*.{jpg,png,gif}', gulp.series(['imagemin']));
+    gulp.watch('src/lottie/**/*.json', gulp.series(['lottie', 'jekyll-rebuild']));  // Watch for changes in Lottie files
     gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html'], gulp.series(['jekyll-rebuild']));
 });
 
 // Default task
-gulp.task('default', gulp.series(['js', 'sass', 'fonts', 'browser-sync', 'watch']));
+gulp.task('default', gulp.series(['js', 'sass', 'fonts', 'imagemin', 'lottie', 'browser-sync', 'watch']));
