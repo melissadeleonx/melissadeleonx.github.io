@@ -1,4 +1,11 @@
 certificates:
+  - title: "CS50 Cybersecurity"
+    issuer: "Harvard University"
+    date: "September 2024"
+    description: "Completed CS50 Introduction to Cybersecurity including five assignments and one final project"
+    image: "/assets/img/CS50-Cybersecurity.png"
+    url: "https://certificates.cs50.io/83264d38-8a4e-4767-953e-ed3b787045b7.pdf?size=letter"
+
   - title: "CS50 Web Programming"
     issuer: "Harvard University"
     date: "September 2024"
