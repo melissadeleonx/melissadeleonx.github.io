@@ -81,7 +81,7 @@ gulp.task('watch', function() {
     gulp.watch('src/js/**/*.js', gulp.series(['js', 'jekyll-rebuild']));
     gulp.watch('src/fonts/**/*.{ttf,woff,woff2}', gulp.series(['fonts']));
     gulp.watch('src/img/**/*.{jpg,png,gif}', gulp.series(['imagemin']));
-    gulp.watch('src/lottie/**/*.json', gulp.series(['lottie', 'jekyll-rebuild']));  // Watch for changes in Lottie files
+    gulp.watch('src/lottie/**/*.json', gulp.series(['lottie', 'jekyll-rebuild']));
     gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html'], gulp.series(['jekyll-rebuild']));
 });
 
