@@ -20,6 +20,13 @@ certificates:
     image: "/assets/img/CS50x.png"
     url: "https://certificates.cs50.io/5bb89bee-1225-4ac5-981a-5d75a17a0661.pdf?size=letter"
 
+  - title: "EDX HarvardX CS50 Web Programming with Python and JavaScript"
+    issuer: "EDX/HarvardX"
+    date: "September 2024"
+    description: "Completed the course study offered by HarvardX, an online learning initiative of Harvard University"
+    image: "/assets/img/cs50webx.png"
+    url: "https://courses.edx.org/certificates/b8882c6308204d2399d306a25cf5f72e"
+
   - title: "EDX HarvardX CS50x Introduction to Computer Science"
     issuer: "EDX/HarvardX"
     date: "December 2023"
